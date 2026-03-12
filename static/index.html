@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopoGuard | Zero-Day Link Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation (Mock) -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="icon">⬡</span>
+                <h2>TopoGuard</h2>
+            </div>
+            <nav>
+                <a href="#" class="active">Live Feed</a>
+                <a href="#">Network Graph</a>
+                <a href="#">Node Memory</a>
+                <a href="#">Settings</a>
+            </nav>
+            <div class="status-indicator">
+                <div class="pulse-dot green"></div>
+                <span>TGN Link Predictor: ONLINE</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard">
+            <header>
+                <h1>Streaming Inference Dashboard</h1>
+                <p>Real-time transaction anomaly detection via Temporal Graph Networks (TGN).</p>
+            </header>
+
+            <!-- Metrics Level -->
+            <section class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Processed Nodes</h3>
+                    <p class="metric-value" id="val-processed">0</p>
+                </div>
+                <div class="metric-card danger-card">
+                    <h3>Zero-Day Anomalies</h3>
+                    <p class="metric-value" id="val-anomalies">0</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Hit Rate</h3>
+                    <p class="metric-value" id="val-hitrate">0.00%</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Avg Latency</h3>
+                    <p class="metric-value" id="val-latency">0 ms</p>
+                </div>
+            </section>
+
+            <!-- Visualization and Feed Level -->
+            <section class="main-content-grid">
+                <!-- Left: Chart -->
+                <div class="chart-container glass-panel">
+                    <div class="panel-header">
+                        <h2>Anomaly Score Drift</h2>
+                    </div>
+                    <canvas id="anomalyChart"></canvas>
+                </div>
+
+                <!-- Right: Live Feed -->
+                <div class="feed-container glass-panel">
+                    <div class="panel-header">
+                        <h2>Live Network Graph Edges</h2>
+                        <span class="badge" id="tx-badge">Waiting for connection...</span>
+                    </div>
+                    <div class="feed-list" id="transaction-feed">
+                        <!-- JS injected transactions will appear here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
