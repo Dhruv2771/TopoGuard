@@ -1,0 +1,19 @@
+# Virtual environments
+venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDEs and Text Editors
+.vscode/
+
+# Local Data and Model Outputs (Important not to upload large files to GitHub)
+*.csv
+*.pt
+
+# Local execution logs
+err.txt
